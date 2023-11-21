@@ -2,26 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+:root {
+  --fire: 238, 129, 48;
+  --normal: 168, 167, 122;
+  --water: 99, 144, 240;
+  --grass: 122, 199, 76;
+  --electric: 247, 208, 44;
+  --ice: 150, 217, 214;
+  --fighting: 194, 46, 40;
+  --poison: 163, 62, 161;
+  --ground: 226, 191, 101;
+  --flying: 9, 143, 243;
+  --psychic: 249, 85, 135;
+  --bug: 166, 185, 26;
+  --rock: 182, 161, 54;
+  --ghost: 115, 87, 151;
+  --dragon: 111, 53, 252;
+  --dark: 112, 87, 70;
+  --steel: 183, 183, 206;
+  --fairy: 214, 133, 173;
+}
+.normal-type-bg {
+  background: linear-gradient(180deg, white 1%, rgba(var(--normal), 1));
+}
+.fire-type-bg {
+  background: linear-gradient(180deg, black 1%, rgba(var(--fire), 1));
+}
+.water-type-bg {
+  background: linear-gradient(180deg, black 1%, rgba(var(--water), 1));
+}
+.grass-type-bg {
+  background: linear-gradient(180deg, black 1%, rgba(var(--grass), 1));
+}
+.electric-type-bg {
+  background: linear-gradient(180deg, white 1%, rgba(var(--electric), 1));
+}
+.ice-type-bg {
+  background: linear-gradient(180deg, white 1%, rgba(var(--ice), 1));
+}
+.fighting-type-bg {
+  background: linear-gradient(180deg, white 1%, rgba(var(--fighting), 1));
+}
+.poison-type-bg {
+  background: linear-gradient(180deg, white 1%, rgba(var(--poison), 1));
+}
+.ground-type-bg {
+  background: linear-gradient(180deg, white 1%, rgb(var(--ground), 1));
+}
+.flying-type-bg {
+  background: linear-gradient(180deg, white 1%, rgba(var(--flying), 1));
+}
+.psychic-type-bg {
+  background: linear-gradient(180deg, white 1%, rgba(var(--psychic), 1));
+}
+.bug-type-bg {
+  background: linear-gradient(180deg, white 1%, rgba(var(--bug), 1));
+}
+.rock-type-bg {
+  background: linear-gradient(180deg, white 1%, rgba(var(--rock), 1));
+}
+.ghost-type-bg {
+  background: linear-gradient(180deg, white 1%, rgba(var(--ghost), 1));
+}
+.dragon-type-bg {
+  background: linear-gradient(180deg, white 1%, rgba(var(--dragon), 1));
+}
+.dark-type-bg {
+  background: linear-gradient(180deg, white 1%, rgba(var(--dark), 1));
+}
+.steel-type-bg {
+  background: linear-gradient(180deg, white 1%, rgba(var(--steel), 1));
+}
+.fairy-type-bg {
+  background: linear-gradient(180deg, white 1%, rgba(var(--fairy), 1));
+}
+
+.grid-bg-grey {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, grey 1px, transparent 1px),
+    linear-gradient(to bottom, grey 1px, transparent 1px);
+}
+.grid-bg-black {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, black 1px, transparent 1px),
+    linear-gradient(to bottom, black 1px, transparent 1px);
 }
